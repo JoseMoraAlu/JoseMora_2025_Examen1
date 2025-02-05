@@ -1,0 +1,43 @@
+package josemora_examen1_2025_ejercicion4;
+
+import java.util.Scanner;
+
+public class JoseMora_Examen1_2025_EjercicioN4 {
+
+    public static void main(String[] args) {
+        int Matriz_Identidad [][] = new int [5][5];
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Ingrese los valores de la Matriz:");
+ 
+        for (int i = 0; i < Matriz_Identidad.length; i++) {
+            for (int j = 0; j < Matriz_Identidad.length; j++) {
+                
+                System.out.print("( " + i + " )( " + j + " ): ");
+                Matriz_Identidad [i][j] = sc.nextInt();
+            }
+        }
+        
+        System.out.println(" ");
+        
+        for (int i = 0; i < Matriz_Identidad.length; i++) {
+            for (int j = 0; j < Matriz_Identidad.length; j++) {
+            
+                System.out.print("( " + Matriz_Identidad[i][j] + " )");
+            }         
+        System.out.println(" ");   
+            
+        }
+        
+        System.out.println("");
+        
+        if (  (Matriz_Identidad[0][1] == 0) && (Matriz_Identidad[0][2] == 0) && (Matriz_Identidad[0][3] == 0) && (Matriz_Identidad[0][4] == 0) && (Matriz_Identidad[1][2] == 0) && (Matriz_Identidad[1][3] == 0) && (Matriz_Identidad[1][4] == 0) && (Matriz_Identidad[2][3] == 0) && (Matriz_Identidad[2][4] == 0) && (Matriz_Identidad[3][4] == 0) ) {
+            System.out.println("Si es una matriz triangular inferior");
+            
+        } else {
+        
+            System.out.println("No es una matriz triangular inferior");
+        }
+    }
+}
