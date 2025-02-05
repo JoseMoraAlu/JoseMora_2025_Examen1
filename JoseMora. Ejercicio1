@@ -1,0 +1,80 @@
+package josemora_examen1_2025_ejercicio1;
+
+import java.util.Scanner;
+
+public class JoseMora_Examen1_2025_Ejercicio1 {
+
+    public static void main(String[] args) {
+        
+        int Matriz_A [][] = new int [3][3];
+        int Matriz_B [][] = new int [3][3];
+        int Matriz_Resultado_Suma [][] = new int [3][3];
+        int Matriz_C [][] = new int [3][3];
+        int Matriz_Resultado_Multiplicacion [][] = new int [3][3];
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Ingrese los valores de la Matriz A:");
+ 
+        for (int i = 0; i < Matriz_A.length; i++) {
+            for (int j = 0; j < Matriz_A.length; j++) {
+                
+                System.out.print("( " + i + " )( " + j + " ): ");
+                Matriz_A [i][j] = sc.nextInt();
+            }
+        }
+        
+        System.out.println(" ");
+        
+        System.out.println("Ingrese los valores de la Matriz B:");
+ 
+        for (int i = 0; i < Matriz_B.length; i++) {
+            for (int j = 0; j < Matriz_B.length; j++) {
+                
+                System.out.print("( " + i + " )( " + j + " ): ");
+                Matriz_B [i][j] = sc.nextInt();
+            }
+        }
+        
+        for (int i = 0; i < Matriz_A.length; i++) {
+            for (int j = 0; j < Matriz_B.length; j++) {
+            
+                Matriz_Resultado_Suma [i][j] = Matriz_A[i][j] + Matriz_B[i][j];
+            }
+        }
+        
+        System.out.println(" ");
+        
+        for (int i = 0; i < Matriz_A.length; i++) {
+            for (int j = 0; j < Matriz_A.length; j++) {
+            
+                System.out.print("( " + Matriz_A[i][j] + " )");
+            }         
+        System.out.println(" ");
+            
+        }
+        
+        System.out.println("       +");
+        
+        for (int i = 0; i < Matriz_B.length; i++) {
+            for (int j = 0; j < Matriz_B.length; j++) {
+            
+                System.out.print("( " + Matriz_B[i][j] + " )");
+            }         
+        System.out.println(" ");
+            
+        }
+        
+        System.out.println("       =");
+        
+        for (int i = 0; i < Matriz_Resultado_Suma.length; i++) {
+            for (int j = 0; j < Matriz_Resultado_Suma.length; j++) {
+            
+                System.out.print("( " + Matriz_Resultado_Suma[i][j] + " )");
+            }         
+        System.out.println(" ");
+            
+        }
+    }
+    
+}
